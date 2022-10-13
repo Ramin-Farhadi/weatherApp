@@ -1,9 +1,10 @@
 .search {
   position: absolute;
   top: 40%;
-  left: 40%;
+  left: 37%;
 }
 .search input {
+  position: relative;
   width: 250px;
   border: none;
   color: #c3e0e5;
@@ -11,4 +12,7 @@
   padding: 8px 5px;
   background-color: #5885af;
   text-align: center;
+}
+::placeholder {
+  color: white;
 }
