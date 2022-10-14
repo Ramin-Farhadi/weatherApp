@@ -1,10 +1,10 @@
 import React from 'react';
 import Search from './Search';
 import './css/header.css';
-function Header() {
+function Header({ ad }) {
   return (
     <div className="header">
-      <Search />
+      <Search ad={ad} />
     </div>
   );
 }
