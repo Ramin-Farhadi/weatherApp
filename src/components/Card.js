@@ -1,7 +1,15 @@
 import React from 'react';
 import './css/card.css';
-function Card() {
-  return <div className="card">this is card</div>;
+import Banner from './Banner';
+import SmallSec from './SmallSec';
+
+function Card({ data }) {
+  return (
+    <div className="card">
+      <Banner />
+      <SmallSec data={data} />
+    </div>
+  );
 }
 
 export default Card;
