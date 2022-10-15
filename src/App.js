@@ -29,7 +29,7 @@ function App() {
   useEffect(() => {
     if (lat && lon) {
       fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=839dabeab893a48daf8fab18b8dd7b87`
+        `https://api.weatherbit.io/v2.0/forecast/daily?lat=${lat}&lon=${lon}&key=8bbbf1c1b9ff4eb39a3c6bcc7e0165ed`
       )
         .then((resp) => resp.json())
         .then((res) => {
