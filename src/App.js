@@ -21,7 +21,7 @@ function App() {
           setLon(res.results[0].geometry.location.lng);
         })
         .catch((resaon) => {
-          setError('No Data was found.');
+          setError('No data was found.');
         });
     }
   }, [address]);
@@ -36,7 +36,7 @@ function App() {
           // we get the response from weather api here.
           console.log(res);
         })
-        .catch((resaon) => setError('NO DATA FOUND please try again'));
+        .catch((reason) => console.log(reason));
     }
   }, [lat, lon]);
 
