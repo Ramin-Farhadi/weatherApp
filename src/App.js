@@ -7,7 +7,7 @@ function App() {
   const [address, setAddress] = useState('');
   const [lat, setLat] = useState('');
   const [lon, setLon] = useState('');
-
+  const [error, setError] = useState('');
   // Check if the address is written and press the enter then it will fetch the address from google.
   useEffect(() => {
     if (address) {
@@ -16,8 +16,12 @@ function App() {
       )
         .then((resp) => resp.json())
         .then((res) => {
+          setError('');
           setLat(res.results[0].geometry.location.lat);
           setLon(res.results[0].geometry.location.lng);
+        })
+        .catch((resaon) => {
+          setError('No Data was found.');
         });
     }
   }, [address]);
@@ -31,13 +35,14 @@ function App() {
         .then((res) => {
           // we get the response from weather api here.
           console.log(res);
-        });
+        })
+        .catch((resaon) => setError('NO DATA FOUND please try again'));
     }
   }, [lat, lon]);
 
   return (
     <div className="App">
-      <Header ad={setAddress} />
+      <Header ad={setAddress} err={error ? error : ''} />
       <Card />
     </div>
   );

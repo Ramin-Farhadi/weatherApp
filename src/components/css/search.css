@@ -13,6 +13,13 @@
   background-color: #5885af;
   text-align: center;
 }
+
+.search p {
+  position: absolute;
+  bottom: -38px;
+  left: 65px;
+  color: #c3e0e5;
+}
 ::placeholder {
   color: white;
 }
