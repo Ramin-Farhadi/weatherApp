@@ -3,12 +3,24 @@ import Tile from './Tile';
 import './css/smallSec.css';
 
 const SmallSec = ({ data }) => {
-  const weatherInfo = data.data;
-  console.log(weatherInfo.datetime);
+  //LINE 7 is undefinded needs to be fixed asap.
+  //   console.log(
+  //     data.data.map((val, index) => {
+  //       return val.datetime;
+  //     })
+  //   );
   return (
     <div className="wrapItems">
-      {weatherInfo.map((val, index) => {
-        <Tile key={index} date={val.datetime} />;
+      {data.data.map((val, index) => {
+        return (
+          <Tile
+            key={index}
+            date={new Date(val.datetime)}
+            lTemp={val.low_temp}
+            hTemp={val.high_temp}
+            icon={val.weather.icon}
+          />
+        );
       })}
     </div>
   );

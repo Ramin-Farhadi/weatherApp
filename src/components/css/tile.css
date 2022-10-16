@@ -1,6 +1,25 @@
 .tile {
-  padding: 50px 30px;
+  flex-wrap: wrap;
+  position: relative;
+  width: 90px;
+  height: 110px;
   margin: 5px;
   background-color: aliceblue;
   border-radius: 8px;
+  color: #274472;
+}
+.highLow {
+  text-align: center;
+  margin: 5px;
+  position: absolute;
+  bottom: 5px;
+}
+.highTemp {
+  margin: 5px;
+}
+.lowTemp {
+  margin: 5px;
+}
+.icon {
+  width: 60px;
 }

@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="App">
       <Header ad={setAddress} err={error ? error : ''} />
-      <Card data={weatherData} />
+      {weatherData && <Card data={weatherData} />}
     </div>
   );
 }
