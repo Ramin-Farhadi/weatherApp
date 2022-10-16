@@ -24,8 +24,13 @@ const Tile = ({ date, lTemp, hTemp, icon }) => {
       break;
     case 6:
       day = 'Saturday';
+      break;
+    default:
+      day = '';
+      break;
   }
   console.log(hTemp, lTemp);
+  // console.log(new Date('2022-10-16'));
   return (
     <div className="tile">
       <div className="day">{day}</div>
@@ -34,6 +39,7 @@ const Tile = ({ date, lTemp, hTemp, icon }) => {
       <img
         className="icon"
         src={`https://www.weatherbit.io/static/img/icons/${icon}.png`}
+        alt="Icon"
       />
 
       <div className="highLow">

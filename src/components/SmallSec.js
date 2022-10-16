@@ -9,13 +9,16 @@ const SmallSec = ({ data }) => {
   //       return val.datetime;
   //     })
   //   );
+  let strDate = '';
   return (
     <div className="wrapItems">
       {data.data.map((val, index) => {
+        strDate = val.datetime.replaceAll('-', ',');
+        // console.log(strDate);
         return (
           <Tile
             key={index}
-            date={new Date(val.datetime)}
+            date={new Date(strDate)}
             lTemp={val.low_temp}
             hTemp={val.high_temp}
             icon={val.weather.icon}
