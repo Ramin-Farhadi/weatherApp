@@ -28,8 +28,7 @@ const Tile = ({ date, lTemp, hTemp, icon }) => {
   console.log(hTemp, lTemp);
   return (
     <div className="tile">
-      {day}
-      <br />
+      <div className="day">{day}</div>
       {/* {date.getDate()} */}
 
       <img

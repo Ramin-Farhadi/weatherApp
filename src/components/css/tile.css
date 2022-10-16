@@ -8,6 +8,9 @@
   border-radius: 8px;
   color: #274472;
 }
+.day {
+  padding-top: 5px;
+}
 .highLow {
   text-align: center;
   margin: 5px;
