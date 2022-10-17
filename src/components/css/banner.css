@@ -1,2 +1,8 @@
 .banner {
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 7px;
+}
+span {
+  padding: 5px;
 }

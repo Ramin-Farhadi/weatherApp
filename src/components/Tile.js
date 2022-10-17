@@ -29,7 +29,7 @@ const Tile = ({ date, lTemp, hTemp, icon }) => {
       day = '';
       break;
   }
-  console.log(hTemp, lTemp);
+  // console.log(hTemp, lTemp);
   // console.log(new Date('2022-10-16'));
   return (
     <div className="tile">

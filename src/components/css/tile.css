@@ -1,7 +1,7 @@
 .tile {
   /* flex-wrap: wrap; */
   position: relative;
-  width: 90px;
+  width: 100px;
   height: 110px;
   margin: 5px;
   background-color: aliceblue;
@@ -17,6 +17,7 @@
   margin: 5px;
   position: absolute;
   bottom: 5px;
+  left: -5px;
 }
 .highTemp {
   margin: 5px;
@@ -26,4 +27,34 @@
 }
 .icon {
   width: 60px;
+}
+@media only screen and (max-width: 790px) {
+  .tile {
+    width: 139px;
+  }
+}
+@media only screen and (max-width: 465px) {
+  .tile {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .tile {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 411px) {
+  .tile {
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .tile {
+    width: 160px;
+  }
+}
+@media only screen and (max-width: 321px) {
+  .tile {
+    width: 140px;
+  }
 }

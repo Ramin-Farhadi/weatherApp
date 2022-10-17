@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import Card from './components/Card';
-import Header from './components/Header';
+// import Header from './components/Header';
 
 function App() {
   const [address, setAddress] = useState('');
-  const [lat, setLat] = useState('');
-  const [lon, setLon] = useState('');
+  // By default we have New york weather
+  const [lat, setLat] = useState('40.7128');
+  const [lon, setLon] = useState('-74.0060');
   const [error, setError] = useState('');
   const [weatherData, setWeatherData] = useState('');
 
@@ -46,8 +47,9 @@ function App() {
 
   return (
     <div className="App">
-      <Header ad={setAddress} err={error ? error : ''} />
-      {weatherData && <Card data={weatherData} />}
+      {/* <Header ad={setAddress} err={error ? error : ''} /> */}
+
+      <Card data={weatherData} ad={setAddress} err={error ? error : ''} />
     </div>
   );
 }

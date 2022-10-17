@@ -16,7 +16,7 @@ function Search({ ad, err }) {
     <div className="search">
       <input
         type="text"
-        placeholder="Search City"
+        placeholder="Search an address"
         onChange={handleinputVal}
         onKeyDown={handleKeyDown}
       />
